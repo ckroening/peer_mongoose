@@ -14,13 +14,6 @@ router.get('/', function(req, res, next) {
   });
 });
 //"req.body is ", req.body);
-var talent = new Talent(req.body)
-talent.save(function err)
-
-res.sendStatus
-
-put = update
-
 
 /* Add a talent record. */
 router.post('/', function(req, res, next) {
@@ -45,7 +38,7 @@ router.put('/history/:id', function(req, res, next) {
   Talent.findByIdAndUpdate(id, update,
     function(err, talent) {
       if(err) throw err;
-      res.send(talent);
+      res.sendStatus(200);
 // updated talent object
       console.log(talent);
     });
